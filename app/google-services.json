@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "248036226494",
+    "firebase_url": "https://global-exchange-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "global-exchange",
+    "storage_bucket": "global-exchange.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:248036226494:android:324707659d894705bab5ef",
+        "android_client_info": {
+          "package_name": "com.example.sprm_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "248036226494-ag2eia3vrodfcbur1d38mbju70loi8cg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9o08W4SogKQYBUfBIw6RwfUOsMmcaEzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "248036226494-ag2eia3vrodfcbur1d38mbju70loi8cg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
