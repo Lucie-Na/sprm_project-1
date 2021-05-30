@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:onClick="signIn"
         android:text="@string/sign_in"
-        android:backgroundTint="@color/secondaryColor"
+        android:background="@color/secondaryColor"
         android:textColor="@color/secondaryTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
