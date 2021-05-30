@@ -1,31 +1,67 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 
 public class Post {
-    private String noUser;
+    private User user;
     private String country;
     private String city;
     private String institution;
     private String content;
-    private HashMap<Post,User> comment;
+    private String date;
+    private ArrayList<Post> comment;
     private ArrayList<User> like;
+    private ArrayList<User> repost;
 
-    public Post(String noUser, String country, String city, String institution, String content) {
-        this.setNoUser(noUser);
+    public Post(User user, String country, String city, String institution, String content, String date) {
+        this.user = user;
         this.setCountry(country);
         this.setCity(city);
         this.setInstitution(institution);
+        this.setDate(date);
         this.setContent(content);
     }
 
-    public String getNoUser() {
-        return noUser;
+    public void addToLike(User user){
+        like.add(user);
+    }
+    public void removeFromLike(User user){
+        like.remove(user);
     }
 
-    public void setNoUser(String noUser) {
-        this.noUser = noUser;
+    public void addToRepost(User user){
+        repost.add(user);
+    }
+
+    public void removeFromRepost(User user){
+        repost.remove(user);
+    }
+
+    public void addToComment(Post post){
+        comment.add(post);
+    }
+
+
+    public int nbComment(){
+        return comment.size();
+    }
+
+    public int nbRepost(){
+        return repost.size();
+    }
+
+    public int nbFav(){
+        return like.size();
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getCountry() {
@@ -42,6 +78,16 @@ public class Post {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        date = date.trim();
+        if(date.equals("")){throw new IllegalArgumentException("Date is empty");}
+        else {this.date = date;}
     }
 
     public String getInstitution() {

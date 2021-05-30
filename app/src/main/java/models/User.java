@@ -7,8 +7,10 @@ import java.util.regex.Pattern;
 public class User {
 
     private String noUser;
+    private int pp;
     private String lastName;
     private String firstName;
+    private String username;
     private String gender;
     private Date birthday;
     private String country;
@@ -19,10 +21,12 @@ public class User {
     private String phoneNumber;
     private String password;
 
-    public User(String noUser, String lastName, String firstName, String gender, Date birthday, String country, int zip, String city, String address, String email, String phoneNumber, String password) {
+    public User(String noUser, int pp, String lastName, String firstName, String username,String gender, Date birthday, String country, int zip, String city, String address, String email, String phoneNumber, String password) {
         this.setNoUser(noUser);
+        this.pp = pp;
         this.setLastName(lastName);
         this.setFirstName(firstName);
+        this.setUsername(username);
         this.setGender(gender);
         this.setBirthday(birthday);
         this.setCountry(country);
@@ -32,6 +36,14 @@ public class User {
         this.setEmail(email);
         this.setPhoneNumber(phoneNumber);
         this.setPassword(password);
+    }
+
+    public int getPp() {
+        return pp;
+    }
+
+    public void setPp(int pp) {
+        this.pp = pp;
     }
 
     public String getNoUser() {
@@ -60,6 +72,16 @@ public class User {
         firstName = firstName.trim();
         if(firstName.equals("")){throw new IllegalArgumentException("First Name is empty");}
         else {this.firstName = firstName; }
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        username = username.trim();
+        if(username.equals("")){throw new IllegalArgumentException("Username Name is empty");}
+        else {this.username = username; }
     }
 
     public String getGender() {
