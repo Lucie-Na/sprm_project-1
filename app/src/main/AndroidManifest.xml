@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SPRM_Project">
         <activity android:name="profileController.EditProfile"></activity>
-        <activity android:name="profileController.MainActivity">
+        <activity android:name="ui.MainActivity"></activity>
+        <activity android:name="ui.SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,13 +19,6 @@
             </intent-filter>
         </activity>
         <activity android:name="profileController.Profile" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
