@@ -1,4 +1,4 @@
-package ProfileController;
+package profileController;
 
 import androidx.appcompat.app.AppCompatActivity;
 
