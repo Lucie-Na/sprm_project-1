@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">SPRM_Project</string>
+    <string name="app_name">ANITA</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_to_your_personal_assistant_for_international_tips_and_advices">Welcome to your personal Network for International Tips and Advices ! Please do sign in</string>
+    <string name="anita_logo">ANITA Logo</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_out">SIGN OUT</string>
 </resources>
