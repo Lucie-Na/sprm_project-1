@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/navmenu_fragments">
+        <item
+            android:id="@+id/navitem_profile"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:title="@string/profile"/>
+        <item
+            android:id="@+id/navitem_travels"
+            android:icon="@drawable/ic_baseline_plane_24"
+            android:title="@string/travels"/>
+        <item
+            android:id="@+id/navitem_documentation"
+            android:icon="@drawable/ic_baseline_document_24"
+            android:title="@string/documentation"/>
+        <item
+            android:id="@+id/navitem_tips"
+            android:icon="@drawable/ic_baseline_lightbulb_24"
+            android:title="@string/tips"/>
+        <item
+            android:id="@+id/navitem_jobs"
+            android:icon="@drawable/ic_baseline_assignment_ind_24"
+            android:title="@string/jobs"/>
+    </group>
+
+    <group
+        android:id="@+id/navmenu_others">
+        <item
+            android:id="@+id/navitem_settings"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="@string/settings"/>
+        <item
+            android:id="@+id/navitem_signout"
+            android:icon="@drawable/ic_baseline_cancel_24"
+            android:title="@string/sign_out"/>
+    </group>
+
+</menu>
