@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_profile">
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="fragment.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_travels"
+        android:name="fragment.travels.TravelsFragment"
+        android:label="@string/travels"
+        tools:layout="@layout/fragment_travels" />
+
+    <fragment
+        android:id="@+id/nav_documentation"
+        android:name="fragment.documentation.DocumentationFragment"
+        android:label="@string/documentation"
+        tools:layout="@layout/fragment_documentation" >
+        <action
+            android:id="@+id/action_nav_documentation_self"
+            app:destination="@id/nav_documentation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_tips"
+        android:name="fragment.tips.TipsFragment"
+        android:label="@string/tips"
+        tools:layout="@layout/fragment_tips" />
+
+    <fragment
+        android:id="@+id/nav_jobs"
+        android:name="fragment.jobs.JobsFragment"
+        android:label="@string/jobs"
+        tools:layout="@layout/fragment_jobs" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="fragment.settings.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
