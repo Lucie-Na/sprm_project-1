@@ -6,4 +6,11 @@
     <string name="anita_logo">ANITA Logo</string>
     <string name="sign_in">SIGN IN</string>
     <string name="sign_out">SIGN OUT</string>
+    <string name="profile">Profile</string>
+    <string name="travels">Travels</string>
+    <string name="documentation">Documentation</string>
+    <string name="tips">Tips</string>
+    <string name="jobs">Jobs</string>
+    <string name="settings">Settings</string>
+    <string name="search">Search</string>
 </resources>
