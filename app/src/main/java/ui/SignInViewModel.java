@@ -7,7 +7,7 @@ import androidx.lifecycle.LiveData;
 
 import com.google.firebase.auth.FirebaseUser;
 
-import data.UserRepository;
+import data.firebase.UserRepository;
 
 public class SignInViewModel extends AndroidViewModel {
     private final UserRepository userRepository;

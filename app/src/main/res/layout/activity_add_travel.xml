@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_margin="@dimen/big_margin"
+android:orientation="vertical"
+tools:context="ui.AddTravelActivity">
+
+<!-- Country -->
+<TextView
+    style="@style/bigger_text_font"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/travel_country" />
+
+<Spinner
+    android:id="@+id/spinner_add_travel_country"
+    style="@style/default_text_font"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/big_margin"
+    android:layout_marginBottom="@dimen/big_margin"/>
+
+<!-- City -->
+<TextView
+    style="@style/bigger_text_font"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/travel_city" />
+
+<Spinner
+    android:id="@+id/spinner_add_travel_city"
+    style="@style/default_text_font"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/big_margin"
+    android:layout_marginBottom="@dimen/big_margin" />
+
+<!-- Institution -->
+<TextView
+    style="@style/bigger_text_font"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/travel_institution" />
+
+<Spinner
+    android:id="@+id/spinner_add_travel_institution"
+    style="@style/default_text_font"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+<!-- Dates -->
+<TextView
+    style="@style/bigger_text_font"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/travel_dates" />
+
+<LinearLayout
+    style="@style/default_text_font"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_marginLeft="@dimen/big_margin"
+    android:layout_marginBottom="@dimen/big_margin">
+
+    <TextView
+        style="@style/default_text_font"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/travel_date_from" />
+
+    <TextView
+        android:id="@+id/text_input_add_travel_start_date"
+        style="@style/default_text_font"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_margin"
+        android:layout_weight="2"
+        android:drawableRight="@drawable/ic_baseline_arrow_drop_down_24"
+        android:inputType="date" />
+
+    <TextView
+        style="@style/default_text_font"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/travel_date_to" />
+
+    <TextView
+        android:id="@+id/text_input_add_travel_end_date"
+        style="@style/default_text_font"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_margin"
+        android:layout_weight="2"
+        android:clickable="true"
+        android:drawableRight="@drawable/ic_baseline_arrow_drop_down_24"
+        android:inputType="date" />
+
+</LinearLayout>
+
+<!-- Duration -->
+<TextView
+    style="@style/bigger_text_font"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/travel_duration" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="@dimen/big_margin"
+    android:layout_marginBottom="@dimen/big_margin">
+
+    <TextView
+        android:id="@+id/text_input_add_travel_duration"
+        style="@style/default_text_font"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <Spinner
+        android:id="@+id/spinner_add_travel_duration_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"/>
+</LinearLayout>
+
+<!-- Status -->
+<TextView
+    style="@style/bigger_text_font"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/travel_status" />
+
+<TextView
+    android:id="@+id/text_input_status"
+    style="@style/default_text_font"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/big_margin"
+    android:layout_marginBottom="@dimen/big_margin" />
+
+<!-- Purpose -->
+<TextView
+    style="@style/bigger_text_font"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/travel_purpose" />
+
+<EditText
+    android:id="@+id/text_input_add_travel_purpose"
+    style="@style/default_text_font"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:gravity="start|top"
+    android:inputType="textMultiLine"
+    android:minLines="4"
+    android:layout_marginLeft="@dimen/big_margin"
+    android:layout_marginBottom="@dimen/big_margin" />
+
+<!-- Next -->
+<Button
+    android:id="@+id/button_add_travel_next"
+    style="@style/default_text_font"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/big_margin"
+    android:text="@string/nav_next" />
+
+</LinearLayout>

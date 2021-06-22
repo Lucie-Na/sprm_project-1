@@ -26,7 +26,7 @@ import java.util.Objects;
 
 import profileController.Profile;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     MainActivityViewModel viewModel;
 
@@ -149,4 +149,5 @@ public class MainActivity extends AppCompatActivity {
     public void profile(View v){
         startActivity(new Intent(getApplicationContext(), Profile.class));
     }
+
 }

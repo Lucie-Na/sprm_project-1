@@ -1,4 +1,4 @@
-package data;
+package data.firebase;
 
 import androidx.lifecycle.LiveData;
 

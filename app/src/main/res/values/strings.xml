@@ -13,4 +13,43 @@
     <string name="jobs">Jobs</string>
     <string name="settings">Settings</string>
     <string name="search">Search</string>
+
+    <!-- For the travels -->
+    <string name="travel_place">Place :</string>
+    <string name="travel_country">Country :</string>
+    <string name="travel_city">City :</string>
+    <string name="travel_institution">Institution :</string>
+    <string name="travel_status">Status :</string>
+    <string name="travel_dates">Dates :</string>
+    <string name="travel_duration">Duration :</string>
+    <string name="travel_purpose">Purpose :</string>
+    <string name="travel_city_conveyance">Conveyance :</string>
+    <string name="travel_city_flate">Flate :</string>
+    <string name="travel_check_list">Check List :</string>
+    <string name="travel_document">Document :</string>
+
+    <string name="travel_date_from">from</string>
+    <string name="travel_date_to">to</string>
+
+    <string name="travel_status_in_progress">currently in the country</string>
+    <string name="travel_status_in_preparation">travel in preparation</string>
+    <string name="travel_status_over">travel is over</string>
+
+    <string name="travel_duration_year">year(s)</string>
+    <string name="travel_duration_semester">semester(s)</string>
+    <string name="travel_duration_month">month(s)</string>
+    <string name="travel_duration_day">day(s)</string>
+
+    <string-array name="travel_duration_type_array">
+        <item>@string/travel_duration_year</item>
+        <item>@string/travel_duration_semester</item>
+        <item>@string/travel_duration_month</item>
+        <item>@string/travel_duration_day</item>
+    </string-array>
+
+    <!-- Navigation -->
+    <string name="nav_next">Next</string>
+    <string name="nav_previous">Previous</string>
+    <string name="nav_validate">Validate</string>
+
 </resources>
