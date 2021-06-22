@@ -49,7 +49,7 @@
                 android:layout_marginBottom="@dimen/big_margin" />
 
             <!-- City -->
-            <TextView
+            <!--<TextView
                 style="@style/bigger_text_font"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/big_margin"
-                android:layout_marginBottom="@dimen/big_margin" />
+                android:layout_marginBottom="@dimen/big_margin" />-->
 
             <!-- Institution -->
             <TextView

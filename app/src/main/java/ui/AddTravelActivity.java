@@ -60,9 +60,6 @@ public class AddTravelActivity extends AppCompatActivity {
         // initialize the country spinner
         initializeCountry();
 
-        // initialize the institution spinner
-        initializeInstitution();
-
         // initialize date fields
         textStartDate = findViewById(R.id.text_input_add_travel_start_date);
         textEndDate = findViewById(R.id.text_input_add_travel_end_date);
@@ -103,6 +100,7 @@ public class AddTravelActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 selectedCountry = parent.getItemAtPosition(position).toString();
                 Log.e("Add travel", "New country selected");
+                initializeInstitution();
             }
 
             @Override
@@ -169,8 +167,18 @@ public class AddTravelActivity extends AppCompatActivity {
             @Override
             public void onChanged(List<Institution> institutions) {
                 listInstitution.clear();
-                for (Institution institutionAPI : institutions) {
-                    listInstitution.add(institutionAPI.getName());
+                Log.e("Add travel", "Institution list has been reseated");
+                for (Institution institutionAPI : institutions)
+                {
+                    if(selectedCountry == null || selectedCountry.isEmpty())
+                    {
+                        listInstitution.add("Please first select a country");
+                    }
+                    else
+                    {
+                        listInstitution.add(institutionAPI.getName());
+                        Log.e("Add travel", "New institution added : " + institutionAPI.getCountry() + ", " + institutionAPI.getName());
+                    }
                 }
                 Collections.sort(listInstitution);
                 adapterInstitution.notifyDataSetChanged();
@@ -229,19 +237,23 @@ public class AddTravelActivity extends AppCompatActivity {
             int comparisonEnd = currentDate.compareTo(endDate);
 
             // set the travel status according to the given travel dates
-            if (comparisonStart == 0) {
-                Log.e("Debug", "comparisonStart == 0");
+            if (comparisonStart == 0)
+            {
                 textStatus.setText(getResources().getString(R.string.travel_status_in_progress));
-            } else if (comparisonStart < 0) {
-                Log.e("Debug", "comparisonStart < 0");
+            }
+            else if (comparisonStart < 0)
+            {
                 textStatus.setText(getResources().getString(R.string.travel_status_in_preparation));
-            } else if (comparisonStart > 0 && comparisonEnd <= 0) {
-                Log.e("Debug", "comparisonStart > 0 && comparisonEnd <= 0");
+            }
+            else if (comparisonStart > 0 && comparisonEnd <= 0)
+            {
                 textStatus.setText(getResources().getString(R.string.travel_status_in_progress));
-            } else if (comparisonEnd > 0) {
-                Log.e("Debug", "comparisonEnd > 0");
+            }
+            else if (comparisonEnd > 0)
+            {
                 textStatus.setText(getResources().getString(R.string.travel_status_over));
-            } else {
+            }
+            else {
                 textStatus.setText("error");
             }
         }
@@ -282,13 +294,3 @@ public class AddTravelActivity extends AppCompatActivity {
 
     }
 }
-
-
-    /***************************************************************************************************************************
-     *
-     *
-     *
-     ***************************************************************************************************************************/
-
-
-
