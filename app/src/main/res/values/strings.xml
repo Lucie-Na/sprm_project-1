@@ -15,6 +15,8 @@
     <string name="search">Search</string>
 
     <!-- For the travels -->
+    <string name="nav_back">Go back</string>
+    <string name="add_travel_title">Add a travel</string>
     <string name="travel_place">Place :</string>
     <string name="travel_country">Country :</string>
     <string name="travel_city">City :</string>
