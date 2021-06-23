@@ -9,8 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SPRM_Project">
-        <activity android:name="profileController.EditProfile"/>
-        <activity android:name="profileController.Profile" >
+        <activity android:name="profileController.EditPassword"></activity>
+        <activity android:name="profileController.EditEmail" />
+        <activity android:name="profileController.EditInformation" />
+        <activity android:name="profileController.EditProfile" />
+        <activity android:name="profileController.Profile">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

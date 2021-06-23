@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="profileController.EditInformation">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp"
+        android:orientation="vertical"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/profileImageEdit"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/profile_image"
+            android:layout_gravity="center"
+            android:layout_marginBottom="100dp"/>
+
+        <EditText
+            android:id="@+id/nameEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:layout_gravity="center"
+            android:layout_marginBottom="35dp"/>
+
+        <EditText
+            android:id="@+id/otherEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:layout_gravity="center"
+            android:layout_marginBottom="35dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:onClick="SaveEdit"
+                android:layout_gravity="bottom"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
