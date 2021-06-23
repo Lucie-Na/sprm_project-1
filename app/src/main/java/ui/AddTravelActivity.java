@@ -131,7 +131,8 @@ public class AddTravelActivity extends AppCompatActivity {
      * @param listToUpdate list to add the country
      * @param apiData
      */
-    private void alreadyInTheSpinner(ArrayList<String> listToUpdate, String apiData) {
+    private void alreadyInTheSpinner(ArrayList<String> listToUpdate, String apiData)
+    {
         boolean alreadyInTheSpinner = false;
 
         // check if the country isn't already in the spinner
