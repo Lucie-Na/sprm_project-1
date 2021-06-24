@@ -48,6 +48,7 @@ public class EditProfile extends AppCompatActivity {
         findViewById(R.id.edit_logout).setOnClickListener(view ->
         {
             logout(this);
+            startActivity(new Intent(getApplicationContext(), ui.MainActivity.class));
         });
 
     }

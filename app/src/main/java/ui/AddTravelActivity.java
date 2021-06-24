@@ -75,7 +75,6 @@ public class AddTravelActivity extends AppCompatActivity {
         // initialize the validation button
         findViewById(R.id.button_add_travel_validate).setOnClickListener(v ->
         {
-            Toast.makeText(this, "Did you just filled the whole form for nothing ? Well... Yes. You should blame the developers for that !", Toast.LENGTH_LONG).show();
             finish();
         });
 
