@@ -24,14 +24,27 @@ class EditEmail extends AppCompatActivity {
         password = findViewById(R.id.passwordEditEmail);
         email = findViewById(R.id.emailEdit);
 
-        oldM = email.getText().toString().trim();
+        //oldM = email.getText().toString().trim();
 
         email.setText("test");
         //profilePicture.setImageURI(fUser.getPhotoUrl());
 
+        // Initialize the button to go back
+        findViewById(R.id.edit_email_back).setOnClickListener(view ->
+        {
+            finish();
+        });
+
+        // Initialize the validation button
+        findViewById(R.id.btn_edit_email_save).setOnClickListener(view ->
+        {
+            //saveEdit(view);
+        });
+
+
     }
 
-    public void SaveEdit(View v){
+    public void saveEdit(View v){
 
         String newMail = email.getText().toString().trim();
 
@@ -64,6 +77,7 @@ class EditEmail extends AppCompatActivity {
                 }
             });
         }*/
+
         finish();
         startActivity(new Intent(getApplicationContext(), Profile.class));
     }

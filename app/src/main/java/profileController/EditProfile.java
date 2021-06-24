@@ -19,23 +19,40 @@ public class EditProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
+
+        // Initialize the button to close the page
+        findViewById(R.id.edit_close).setOnClickListener(view ->
+        {
+            finish();
+        });
+
+        // Initialize the edit profile button
+        findViewById(R.id.edit_profile).setOnClickListener(view ->
+        {
+            startActivity(new Intent(getApplicationContext(), EditInformation.class));
+        });
+
+        // Initialize the edit email button
+        findViewById(R.id.edit_email).setOnClickListener(view ->
+        {
+            startActivity(new Intent(getApplicationContext(), EditEmail.class));
+        });
+
+        // Initialize the edit password button
+        findViewById(R.id.edit_password).setOnClickListener(view ->
+        {
+            startActivity(new Intent(getApplicationContext(), EditPassword.class));
+        });
+
+        // Initialize the logout button
+        findViewById(R.id.edit_logout).setOnClickListener(view ->
+        {
+            logout(this);
+        });
+
     }
 
-    public void editInformation(View v){
-        startActivity(new Intent(getApplicationContext(), EditInformation.class));
-    }
 
-    public void editEmail(View v){
-        startActivity(new Intent(getApplicationContext(), EditEmail.class));
-    }
-
-    public void resetPassword(View v){
-        startActivity(new Intent(getApplicationContext(), EditPassword.class));
-    }
-
-    public void logoutFromProfile(View v){
-        logout(this);
-    }
     private void logout(Activity a) {
         AlertDialog.Builder builder = new AlertDialog.Builder(a);
         builder.setTitle("Logout");
@@ -55,9 +72,5 @@ public class EditProfile extends AppCompatActivity {
             }
         });
         builder.show();
-    }
-
-    public void closeActivity(View v){
-        finish();
     }
 }

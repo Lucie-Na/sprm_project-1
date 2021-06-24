@@ -1,116 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context="profileController.Profile"
-    android:layout_margin="@dimen/big_margin">
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/big_margin"
+    tools:context="profileController.Profile">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="250dp">
-
-            <ImageView
-                android:id="@+id/user_banner"
-                android:layout_width="match_parent"
-                android:layout_height="190dp"
-                android:src="@drawable/no_banner" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/user_banner"
-                android:layout_marginBottom="-50dp"
-                android:background="@color/black"
-                app:cardCornerRadius="50dp">
-
-                <ImageView
-                    android:id="@+id/user_picture"
-                    android:layout_width="96dp"
-                    android:layout_height="96dp"
-                    android:src="@drawable/no_profile_picture" />
-
-            </androidx.cardview.widget.CardView>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginRight="@dimen/small_margin"
-                android:onClick="editProfile"
-                android:text="Edit"
-                android:visibility="visible" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginRight="@dimen/small_margin"
-                android:text="Edit"
-                android:visibility="invisible" />
-
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/user_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/small_margin"
-            android:text="UserName"
-            android:textSize="22sp" />
-
-        <TextView
-            android:id="@+id/user_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/small_margin"
-            android:text="userId"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/user_bio"
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:layout_marginLeft="@dimen/small_margin"
-            android:layout_marginTop="@dimen/big_margin"
-            android:layout_marginRight="@dimen/small_margin"
-            android:text="User Bio Lorem"
-            android:textSize="18sp" />
+        android:layout_gravity="top|center_vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/user_followers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:text="X Followers"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/user_follow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:text="X Followers"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <include
-            layout="@layout/tab_profile"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    </LinearLayout>
-</ScrollView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <ImageView
+                    android:id="@+id/user_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:src="@drawable/no_banner" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/user_banner"
+                    android:layout_marginBottom="-50dp"
+                    android:background="@color/black"
+                    app:cardCornerRadius="50dp">
+
+                    <ImageView
+                        android:id="@+id/user_picture"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:src="@drawable/no_profile_picture" />
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/btn_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/small_margin"
+                    android:clickable="true"
+                    android:text="Edit"
+                    android:visibility="visible" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/small_margin"
+                    android:text="Edit"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:text="UserName"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/user_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:text="userId"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/user_bio"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:layout_marginRight="@dimen/small_margin"
+                android:text="User Bio Lorem"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/user_followers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="X Followers"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/user_follow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="X Followers"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/tab_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_travel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_add_24"
+        app:maxImageSize="60sp" />
+
+</FrameLayout>

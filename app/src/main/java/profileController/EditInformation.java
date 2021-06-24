@@ -8,14 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.sprm_project.R;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class EditInformation extends AppCompatActivity {
 
@@ -43,6 +37,11 @@ public class EditInformation extends AppCompatActivity {
         name.setText("test"/*fUser.getDisplayName()*/);
         email.setText("test");
         //profilePicture.setImageURI(fUser.getPhotoUrl());
+
+        findViewById(R.id.edit_infromation_back).setOnClickListener(view ->
+        {
+            finish();
+        });
     }
 
     public void SaveEdit(View v){

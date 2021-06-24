@@ -34,6 +34,10 @@ public class EditPassword extends AppCompatActivity {
         actualPassword = findViewById(R.id.actualPassword);
         newPassword = findViewById(R.id.newPassword);
         ReTypeNewPassword = findViewById(R.id.reTypeNewPassword);
+        findViewById(R.id.edit_profile_back).setOnClickListener(view ->
+        {
+            finish();
+        });
     }
 
     public void SaveNewPassword(View v){

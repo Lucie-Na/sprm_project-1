@@ -4,20 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="profileController.EditProfile">
+    tools:context="profileController.EditProfile"
+    android:layout_margin="@dimen/big_margin">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_gravity="bottom"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="@dimen/big_margin">
 
         <Button
+            android:id="@+id/edit_close"
             android:layout_width="42dp"
             android:layout_height="42dp"
-            android:background="@drawable/ic_close"
-            android:onClick="closeActivity" />
+            android:background="@drawable/ic_close" />
 
         <ImageView
             android:layout_width="200dp"
@@ -30,25 +31,26 @@
             android:layout_weight="1"
             />
         <Button
+            android:id="@+id/edit_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="edit profile"
-            android:onClick="editInformation" />
+            android:text="edit profile" />
         <Button
+            android:id="@+id/edit_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Edit Email"
-            android:onClick="editEmail"/>
+            android:text="Edit Email" />
         <Button
+            android:id="@+id/edit_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="rest password"
-            android:onClick="resetPassword"/>
+            android:text="reset password"/>
         <Button
+            android:id="@+id/edit_logout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="logout"
-            android:onClick="logoutFromProfile"
             android:layout_marginBottom="100dp"/>
+
     </LinearLayout>
 </RelativeLayout>

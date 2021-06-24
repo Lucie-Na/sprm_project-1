@@ -46,6 +46,7 @@ public class Profile extends AppCompatActivity {
         viewPager.setAdapter(tabAdapter);
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         tabLayout.setupWithViewPager(viewPager);
+
     }
 
     public void editProfile(View v){

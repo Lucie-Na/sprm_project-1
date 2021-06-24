@@ -70,16 +70,6 @@ public class UserTravel extends Fragment {
         // Inflate the layout for this fragment
         View currentFragment = inflater.inflate(R.layout.fragment_user_travel, container, false);
 
-        // Initialize the floating action button
-        FloatingActionButton fabAddTravel = currentFragment.findViewById(R.id.fab_add_travel);
-        fabAddTravel.setOnClickListener(view ->
-        {
-            Intent intent = new Intent(currentFragment.getContext(), AddTravelActivity.class);
-            // wait a result from the new activity
-            startActivity(intent);
-            //startActivityForResult(intent, NEW_TRAVEL_ACTIVITY_REQUEST_CODE);
-        });
-
         return currentFragment;
     }
 }

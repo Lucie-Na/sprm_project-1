@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,6 +15,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.sprm_project.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -22,6 +24,7 @@ import fragment.UserBadge;
 import fragment.UserPost;
 import fragment.UserTravel;
 import profileController.EditProfile;
+import ui.AddTravelActivity;
 
 
 public class ProfileFragment extends Fragment
@@ -35,7 +38,6 @@ public class ProfileFragment extends Fragment
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //View currentView = inflater.inflate(R.layout.fragment_profile, container, false);
         currentView = inflater.inflate(R.layout.fragment_profile, container, false);
 
         tabLayout = currentView.findViewById(R.id.tab_profile);
@@ -51,12 +53,25 @@ public class ProfileFragment extends Fragment
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         tabLayout.setupWithViewPager(viewPager);
 
-        return currentView;
-    }
+        // Initialize the add travel floating action button
+        FloatingActionButton fabAddTravel = currentView.findViewById(R.id.fab_add_travel);
+        fabAddTravel.setOnClickListener(view ->
+        {
+            Intent intent = new Intent(currentView.getContext(), AddTravelActivity.class);
+            // wait a result from the new activity
+            startActivity(intent);
+            //startActivityForResult(intent, NEW_TRAVEL_ACTIVITY_REQUEST_CODE);
+        });
 
-    public void editProfile(View v)
-    {
-        startActivity(new Intent(currentView.getContext(), EditProfile.class));
+        // Initialize the edit profile button
+        Button editButton = currentView.findViewById(R.id.btn_edit_profile);
+        editButton.setOnClickListener(view ->
+                {
+                    Intent intent = new Intent(currentView.getContext(), EditProfile.class);
+                    startActivity(intent);
+                });
+
+        return currentView;
     }
 
     private class TabProfileAdapter extends FragmentPagerAdapter
