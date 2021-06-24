@@ -10,7 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SPRM_Project"
         android:usesCleartextTraffic="true">
+        <activity android:name="profileController.EditPassword"></activity>
+        <activity android:name="profileController.EditEmail" />
+        <activity android:name="profileController.EditInformation" />
         <activity android:name="ui.AddTravelActivity"></activity>
+        <activity android:name="profileController.Profile"/>
         <activity android:name="profileController.EditProfile" />
         <activity
             android:name="ui.MainActivity"
@@ -23,7 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="profileController.Profile" />
     </application>
 
 </manifest>

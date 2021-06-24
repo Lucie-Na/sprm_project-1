@@ -31,7 +31,7 @@ public class Profile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.fragment_profile);
         //getSupportActionBar().hide();
 
         tabLayout = findViewById(R.id.tab_profile);
@@ -53,7 +53,7 @@ public class Profile extends AppCompatActivity {
     }
 
 
-    private class TabProfileAdapter extends FragmentPagerAdapter {
+    public static class TabProfileAdapter extends FragmentPagerAdapter {
         //Initialize ArrayList
         ArrayList<Fragment> fragmentsArrayList = new ArrayList<>();
         ArrayList<String> stringArrayList = new ArrayList<>();

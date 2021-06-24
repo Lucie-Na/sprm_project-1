@@ -53,5 +53,8 @@
     <string name="nav_next">Next</string>
     <string name="nav_previous">Previous</string>
     <string name="nav_validate">Validate</string>
+    <string name="nav_profile_post">POST</string>
+    <string name="nav_profile_travel">TRAVEL</string>
+    <string name="nav_profile_badge">BADGE</string>
 
 </resources>

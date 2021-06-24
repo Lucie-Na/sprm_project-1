@@ -1,5 +1,6 @@
 package fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,6 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.sprm_project.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import ui.AddTravelActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,12 +59,27 @@ public class UserTravel extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        // initialize floating action button
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)
+    {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_user_travel, container, false);
+        View currentFragment = inflater.inflate(R.layout.fragment_user_travel, container, false);
+
+        // Initialize the floating action button
+        FloatingActionButton fabAddTravel = currentFragment.findViewById(R.id.fab_add_travel);
+        fabAddTravel.setOnClickListener(view ->
+        {
+            Intent intent = new Intent(currentFragment.getContext(), AddTravelActivity.class);
+            // wait a result from the new activity
+            startActivity(intent);
+            //startActivityForResult(intent, NEW_TRAVEL_ACTIVITY_REQUEST_CODE);
+        });
+
+        return currentFragment;
     }
 }

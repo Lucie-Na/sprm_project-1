@@ -8,15 +8,37 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_gravity="bottom"
         android:layout_marginTop="50dp">
+
+        <Button
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@drawable/ic_close"
+            android:onClick="closeActivity" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_settings"
+            android:layout_gravity="center"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="edit profile"
-            android:onClick="editProfile" />
+            android:onClick="editInformation" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Email"
+            android:onClick="editEmail"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,6 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="logout"
-            android:onClick="logoutFromProfile"/>
+            android:onClick="logoutFromProfile"
+            android:layout_marginBottom="100dp"/>
     </LinearLayout>
 </RelativeLayout>
